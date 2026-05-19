@@ -1,0 +1,74 @@
+[
+  {
+    "id": "prop-001",
+    "title": "TODO: Property Name",
+    "address": "TODO: 123 Main Street, City, TX 75001",
+    "price": "$TODO,000",
+    "type": "Residential",
+    "status": "Available",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2800,
+    "imageAlt": "TODO: Describe property exterior",
+    "featured": true
+  },
+  {
+    "id": "prop-002",
+    "title": "TODO: Property Name",
+    "address": "TODO: 456 Oak Ave, City, TX 75002",
+    "price": "$TODO,000",
+    "type": "Commercial",
+    "status": "Available",
+    "sqft": 5200,
+    "imageAlt": "TODO: Describe property exterior",
+    "featured": true
+  },
+  {
+    "id": "prop-003",
+    "title": "TODO: Property Name",
+    "address": "TODO: 789 Elm Blvd, City, TX 75003",
+    "price": "$TODO,000",
+    "type": "Residential",
+    "status": "Under Contract",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 1950,
+    "imageAlt": "TODO: Describe property exterior",
+    "featured": true
+  },
+  {
+    "id": "prop-004",
+    "title": "TODO: Property Name",
+    "address": "TODO: 321 Pine Rd, City, TX 75004",
+    "price": "$TODO,000",
+    "type": "Land",
+    "status": "Available",
+    "sqft": 43560,
+    "imageAlt": "TODO: Describe property",
+    "featured": false
+  },
+  {
+    "id": "prop-005",
+    "title": "TODO: Property Name",
+    "address": "TODO: 654 Maple Ct, City, TX 75005",
+    "price": "$TODO,000",
+    "type": "Multi-Family",
+    "status": "Sold",
+    "sqft": 4100,
+    "imageAlt": "TODO: Describe property exterior",
+    "featured": false
+  },
+  {
+    "id": "prop-006",
+    "title": "TODO: Property Name",
+    "address": "TODO: 987 Cedar Ln, City, TX 75006",
+    "price": "$TODO,000",
+    "type": "Residential",
+    "status": "Available",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "sqft": 3600,
+    "imageAlt": "TODO: Describe property exterior",
+    "featured": false
+  }
+]
