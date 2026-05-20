@@ -34,16 +34,23 @@ export default function Header() {
         scrolled ? "shadow-sm" : ""
       } bg-navy`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-24 lg:h-28">
-        {/* Logo / Business name */}
-        <Link href="/" aria-label="Texas Platinum Group — Home">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-28 lg:h-32">
+        {/* Logos */}
+        <Link href="/" aria-label="Texas Platinum Group — Home" className="flex flex-col items-start gap-1">
           <Image
             src="/logo.png"
             alt="Texas Platinum Group"
-            width={160}
-            height={60}
-            className="h-20 lg:h-24 w-auto object-contain"
+            width={200}
+            height={75}
+            className="h-24 lg:h-28 w-auto object-contain"
             priority
+          />
+          <Image
+            src="/bpo-homes.jpg"
+            alt="BPO Homes"
+            width={100}
+            height={30}
+            className="h-6 lg:h-7 w-auto object-contain"
           />
         </Link>
 
