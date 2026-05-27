@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import FadeUp from "@/components/shared/FadeUp";
 
 export const metadata: Metadata = {
@@ -12,12 +13,14 @@ const team = [
     title: "Broker & Owner",
     bio: "A Dallas native with 35+ years of business marketing experience and a real estate career spanning residential, commercial, and property management since 1990. Tonia is fluent in Russian and Polish and has served clients across the entire DFW metroplex with a mission to make America's dream of homeownership a reality.",
     imageAlt: "Tonia Felczer, Broker & Owner",
+    photo: "/tonia.jpg",
   },
   {
     name: "Mark Merlene Sr.",
     title: "Realtor",
     bio: "Mark has been in real estate since 1983, starting in commercial and expanding into residential in 2008. He holds two specialized certifications — Certified Distressed Property Expert (CDPE) and Certified Military Residential Specialist (CMRS) — making him a trusted resource for veterans and complex transactions.",
     imageAlt: "Mark Merlene Sr., Realtor",
+    photo: null,
   },
 ];
 
@@ -100,20 +103,18 @@ export default function AboutPage() {
           </FadeUp>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map(({ name, title, bio, imageAlt }, i) => (
+            {team.map(({ name, title, bio, imageAlt, photo }, i) => (
               <FadeUp key={name + i} delay={i * 0.1}>
                 <div className="bg-white border border-border rounded-lg overflow-hidden">
-                  {/* Headshot placeholder */}
-                  <div
-                    className="aspect-square bg-cream-dark flex items-center justify-center"
-                    role="img"
-                    aria-label={imageAlt}
-                  >
-                    <svg className="text-border w-10 h-10" viewBox="0 0 40 40" fill="none" aria-hidden>
-                      <circle cx="20" cy="16" r="7" stroke="currentColor" strokeWidth="1.5" />
-                      <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
-                    {/* TODO: Replace with <Image src={member.image} alt={imageAlt} fill /> */}
+                  <div className="aspect-square bg-cream-dark relative flex items-center justify-center" role="img" aria-label={imageAlt}>
+                    {photo ? (
+                      <Image src={photo} alt={imageAlt} fill className="object-cover object-top" />
+                    ) : (
+                      <svg className="text-border w-10 h-10" viewBox="0 0 40 40" fill="none" aria-hidden>
+                        <circle cx="20" cy="16" r="7" stroke="currentColor" strokeWidth="1.5" />
+                        <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                      </svg>
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="font-serif text-base font-semibold text-navy">{name}</h3>
