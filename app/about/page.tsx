@@ -20,7 +20,7 @@ const team = [
     title: "Realtor",
     bio: "Mark has been in real estate since 1983, starting in commercial and expanding into residential in 2008. He holds two specialized certifications — Certified Distressed Property Expert (CDPE) and Certified Military Residential Specialist (CMRS) — making him a trusted resource for veterans and complex transactions.",
     imageAlt: "Mark Merlene Sr., Realtor",
-    photo: null,
+    photo: "/Mark.PNG",
   },
 ];
 
