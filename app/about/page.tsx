@@ -3,37 +3,37 @@ import FadeUp from "@/components/shared/FadeUp";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "TODO: Meta description for the About page.",
+  description: "Meet the Texas Platinum Group team — experienced DFW real estate professionals led by Broker Tonia Felczer with 35+ years in the industry.",
 };
 
 const team = [
-  // TODO: Replace with your actual team members
   {
-    name: "TODO: Team Member Name",
-    title: "TODO: Title / Role",
-    bio: "TODO: 2-3 sentence bio. Highlight experience, specialization, and what they bring to clients.",
-    imageAlt: "TODO: Describe headshot",
+    name: "Tonia Felczer",
+    title: "Broker & Owner",
+    bio: "A Dallas native with 35+ years of business marketing experience and a real estate career spanning residential, commercial, and property management since 1990. Tonia is fluent in Russian and Polish and has served clients across the entire DFW metroplex with a mission to make America's dream of homeownership a reality.",
+    imageAlt: "Tonia Felczer, Broker & Owner",
   },
   {
-    name: "TODO: Team Member Name",
-    title: "TODO: Title / Role",
-    bio: "TODO: 2-3 sentence bio. Highlight experience, specialization, and what they bring to clients.",
-    imageAlt: "TODO: Describe headshot",
+    name: "Veronica Spencer",
+    title: "Realtor",
+    bio: "With 23+ years of licensed experience in the DFW market, Veronica brings deep local knowledge and a passion for helping buyers, sellers, renters, and first-time homebuyers navigate every step of their real estate journey.",
+    imageAlt: "Veronica Spencer, Realtor",
   },
   {
-    name: "TODO: Team Member Name",
-    title: "TODO: Title / Role",
-    bio: "TODO: 2-3 sentence bio. Highlight experience, specialization, and what they bring to clients.",
-    imageAlt: "TODO: Describe headshot",
+    name: "Mark Merlene Sr.",
+    title: "Realtor",
+    bio: "Mark has been in real estate since 1983, starting in commercial and expanding into residential in 2008. He holds two specialized certifications — Certified Distressed Property Expert (CDPE) and Certified Military Residential Specialist (CMRS) — making him a trusted resource for veterans and complex transactions.",
+    imageAlt: "Mark Merlene Sr., Realtor",
   },
 ];
 
 const credentials = [
-  // TODO: Replace with your real affiliations, designations, licenses
-  "TODO: State Real Estate License #000000",
-  "TODO: Professional designation (e.g., CRS, GRI, CCIM)",
-  "TODO: Board / MLS membership",
-  "TODO: Professional affiliation or award",
+  "Texas Real Estate Broker License — Tonia Felczer",
+  "Certified Distressed Property Expert (CDPE) — Mark Merlene Sr.",
+  "Certified Military Residential Specialist (CMRS) — Mark Merlene Sr.",
+  "BPO Homes Affiliated Brokerage",
+  "35+ Years Combined DFW Real Estate Experience",
+  "Serving Plano, Frisco, Allen, McKinney, Dallas, Fort Worth & surrounding areas",
 ];
 
 export default function AboutPage() {
@@ -58,19 +58,17 @@ export default function AboutPage() {
             <FadeUp>
               <div>
                 <h2 id="story-heading" className="font-serif text-3xl lg:text-4xl font-semibold text-navy mb-6">
-                  {/* TODO: Replace with your own story heading */}
-                  Built on Relationships, Driven by Results.
+                  Making America's Dream a Reality, One Home at a Time.
                 </h2>
-                {/* TODO: Replace paragraphs below with your firm's story */}
                 <div className="prose prose-slate text-stone leading-relaxed space-y-4 text-base">
                   <p>
-                    TODO: Tell your origin story — when you were founded, why, and what gap you set out to fill in the market. Keep it specific to your region and clientele.
+                    Texas Platinum Group was built on a simple belief: every client deserves an agent who treats their transaction like it's the most important one in the world — because for them, it is. Led by Broker and Owner Tonia Felczer, our team brings together decades of DFW real estate experience with a personal, hands-on approach that larger brokerages simply can't match.
                   </p>
                   <p>
-                    TODO: Describe what makes your approach different from other firms — your philosophy, your process, and your commitment to clients.
+                    Tonia has been involved in real estate since 1990, working across residential, commercial, and property management. Her background in business marketing, combined with fluency in Russian and Polish, has made her a trusted resource for a diverse clientele throughout the Dallas-Fort Worth metroplex. Our team specializes in buyers, sellers, investors, first-time homebuyers, relocations, short sales, and military families.
                   </p>
                   <p>
-                    TODO: Add any noteworthy milestones, community involvement, or recognition that builds credibility with prospective clients.
+                    Whether you're searching for your first home in Plano, selling an investment property in Frisco, or relocating to the DFW area from across the country, Texas Platinum Group has the local knowledge and professional network to get you to closing — smoothly and confidently.
                   </p>
                 </div>
               </div>
