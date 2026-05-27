@@ -109,10 +109,10 @@ export default function ChatBot() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          messages: newMessages.map((m) => ({
-            role: m.role,
-            content: m.content,
-          })),
+          // Strip the initial greeting (first assistant msg) — Anthropic requires first message to be from user
+          messages: newMessages
+            .filter((m, i) => !(i === 0 && m.role === "assistant"))
+            .map((m) => ({ role: m.role, content: m.content })),
         }),
       });
 
@@ -148,6 +148,15 @@ export default function ChatBot() {
               });
             } else if (parsed.type === "lead_saved") {
               setLeadSaved(true);
+            } else if (parsed.type === "error") {
+              setMessages((prev) => {
+                const updated = [...prev];
+                updated[updated.length - 1] = {
+                  role: "assistant",
+                  content: "Sorry, I ran into an issue. Please try again.",
+                };
+                return updated;
+              });
             }
           } catch {
             // skip malformed events
