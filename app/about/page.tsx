@@ -14,12 +14,6 @@ const team = [
     imageAlt: "Tonia Felczer, Broker & Owner",
   },
   {
-    name: "Veronica Spencer",
-    title: "Realtor",
-    bio: "With 23+ years of licensed experience in the DFW market, Veronica brings deep local knowledge and a passion for helping buyers, sellers, renters, and first-time homebuyers navigate every step of their real estate journey.",
-    imageAlt: "Veronica Spencer, Realtor",
-  },
-  {
     name: "Mark Merlene Sr.",
     title: "Realtor",
     bio: "Mark has been in real estate since 1983, starting in commercial and expanding into residential in 2008. He holds two specialized certifications — Certified Distressed Property Expert (CDPE) and Certified Military Residential Specialist (CMRS) — making him a trusted resource for veterans and complex transactions.",
