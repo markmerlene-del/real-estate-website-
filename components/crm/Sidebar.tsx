@@ -39,6 +39,16 @@ const navItems = [
       </svg>
     ),
   },
+  {
+    href: '/crm/properties',
+    label: 'Properties',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+        <path d="M2 7L8 2l6 5v7a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7Z" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round" />
+        <path d="M6 15V9h4v6" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
 ]
 
 export default function CRMSidebar({ user }: { user: User }) {

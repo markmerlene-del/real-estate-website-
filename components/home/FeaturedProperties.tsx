@@ -44,11 +44,7 @@ export default function FeaturedProperties() {
         </div>
 
         {featured.length === 0 && (
-          <p className="text-center text-stone py-16">
-            {/* TODO: Remove this once you populate properties.json */}
-            No featured properties at this time. Add <code>{"featured: true"}</code> to entries in{" "}
-            <code>data/properties.json</code>.
-          </p>
+          <p className="text-center text-stone py-16">No featured properties at this time.</p>
         )}
       </div>
     </section>

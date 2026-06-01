@@ -8,6 +8,7 @@ export interface Property {
   bedrooms?: number
   bathrooms?: number
   sqft?: number
+  image?: string
   imageAlt: string
   featured?: boolean
 }

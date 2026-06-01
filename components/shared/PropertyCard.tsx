@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Property } from "@/types";
 
 const statusColors: Record<Property["status"], string> = {
@@ -11,22 +12,28 @@ interface PropertyCardProps {
 }
 
 export default function PropertyCard({ property }: PropertyCardProps) {
-  const { title, address, price, type, status, bedrooms, bathrooms, sqft, imageAlt } = property;
+  const { title, address, price, type, status, bedrooms, bathrooms, sqft, image, imageAlt } = property;
 
   return (
     <article className="bg-white border border-border rounded-lg overflow-hidden flex flex-col">
-      {/* Image placeholder */}
-      <div
-        className="aspect-[4/3] bg-cream-dark flex items-center justify-center"
-        role="img"
-        aria-label={imageAlt}
-      >
-        <svg className="text-border w-12 h-12" viewBox="0 0 48 48" fill="none" aria-hidden>
-          <rect x="4" y="12" width="40" height="28" rx="2" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M4 28l10-8 8 6 8-10 14 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          <circle cx="17" cy="21" r="3" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-        {/* TODO: Replace with <Image> once you add real photos */}
+      <div className="aspect-[4/3] bg-cream-dark relative flex items-center justify-center">
+        {image ? (
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        ) : (
+          <div role="img" aria-label={imageAlt}>
+            <svg className="text-border w-12 h-12" viewBox="0 0 48 48" fill="none" aria-hidden>
+              <rect x="4" y="12" width="40" height="28" rx="2" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M4 28l10-8 8 6 8-10 14 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <circle cx="17" cy="21" r="3" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </div>
+        )}
       </div>
 
       <div className="p-5 flex flex-col gap-3 flex-1">
@@ -46,7 +53,6 @@ export default function PropertyCard({ property }: PropertyCardProps) {
 
         <p className="text-lg font-semibold text-charcoal mt-auto">{price}</p>
 
-        {/* Stats row */}
         {(bedrooms !== undefined || bathrooms !== undefined || sqft !== undefined) && (
           <div className="flex items-center gap-4 text-xs text-stone border-t border-border pt-3">
             {bedrooms !== undefined && (
